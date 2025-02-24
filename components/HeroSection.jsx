@@ -31,7 +31,7 @@ const HeroSection = () => {
             crafting solutions for individuals and businesses
           </p>
         </div>
-        <div className="buttons w-full flex items-center justify-center gap-4 mx-auto">
+        <div className="buttons w-full flex items-center justify-center flex-wrap gap-4 mx-auto">
           <Button>
             Connect with me
             <ArrowBigRight />

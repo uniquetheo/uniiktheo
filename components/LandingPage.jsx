@@ -20,7 +20,7 @@ const LandingPage = () => {
           },
         },
         color: {
-          value: "#000000", // Particle color
+          value: "#2670CD", // Particle color
         },
         shape: {
           type: "circle", // Shape of particles
@@ -48,7 +48,7 @@ const LandingPage = () => {
         line_linked: {
           enable: true,
           distance: 150, // Distance between linked particles
-          color: "#000000",
+          color: "#2670CD",
           opacity: 0.4,
           width: 1,
         },

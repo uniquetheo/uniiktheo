@@ -34,7 +34,7 @@ const AboutSection = () => {
         </div>
         <div className="tools w-full max-w-[750px] my-4 mx-auto">
           <h3>Main tools I use</h3>
-          <div className="flex gap-3 my-2">
+          <div className="flex flex-wrap gap-3 my-2">
             {tools.map((tool, index) => (
               <div
                 key={index}
