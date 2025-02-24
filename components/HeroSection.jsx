@@ -2,13 +2,22 @@ import React from "react";
 import { Button } from "./ui/button";
 import { ArrowDown } from "lucide-react";
 import { ArrowBigRight } from "lucide-react";
+import Image from "next/image";
 
 const HeroSection = () => {
   return (
     <div id="home" className="w-full min-h-[calc(100vh-64px)] mt-16">
       <div className="min-h-[calc(100vh-64px)] flex flex-col justify-evenly items-center gap-4">
         <div className="avatar w-full flex flex-col items-center gap-4">
-          <div className="aspect-square w-40 h-40 bg-primary rounded-full"></div>
+          <div className="aspect-square w-40 h-40 bg-primary rounded-full overflow-hidden shadow">
+            <Image
+              src="/images/me-.png"
+              alt="me"
+              width={1440}
+              height={1440}
+              className="object-contain w-40"
+            />
+          </div>
           <h3 className="text-center font-semibold">
             Hi! I'm Theophilus Mercifield 👋
           </h3>
