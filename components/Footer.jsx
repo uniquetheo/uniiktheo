@@ -6,8 +6,8 @@ const Footer = () => {
   return (
     <footer className="">
       <div className="container mx-auto px-4 py-6 border-t">
-        <div className="flex justify-between items-center">
-          <div className="flex h-8 justify-center items-center">
+        <div className="flex justify-between items-center gap-4 flex-wrap ">
+          <div className="flex sm:h-8 justify-center items-center gap-4 flex-wrap w-full sm:w-auto">
             <Link
               href="https://uniiktheo.tech"
               className="hover:cursor-pointer"
@@ -23,7 +23,7 @@ const Footer = () => {
             </Link>
             <p>All rights reserved &copy; {new Date().getFullYear()}</p>
           </div>
-          <div className="flex gap-3">
+          <div className="flex gap-3 justify-center items-center w-full sm:w-auto">
             {socials.map((social, index) => (
               <Link
                 key={index}

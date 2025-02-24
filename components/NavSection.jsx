@@ -48,6 +48,7 @@ const NavSection = () => {
         <Link href="/" className="hover:cursor-pointer hover:scale-105">
           <Image
             src="/images/uniik-plain.png"
+            alt="uniiktheo logo"
             width={106}
             height={500}
             className="object-contain h-16"
@@ -92,7 +93,7 @@ const NavSection = () => {
           {menuOpen ? <X /> : <AlignJustify />}
         </div>
         <Button className="hover:scale-105 hidden md:block">
-          <Link href="/contact">Contact</Link>
+          <Link href="#contact">Contact</Link>
         </Button>
       </div>
     </div>

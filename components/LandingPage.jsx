@@ -7,13 +7,13 @@ import Contact from "./Contact";
 
 const LandingPage = () => {
   return (
-    <>
+    <div className="flex flex-col gap-12">
       <HeroSection />
       <AboutSection />
       <Services />
       <MyWork />
       <Contact />
-    </>
+    </div>
   );
 };
 

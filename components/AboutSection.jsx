@@ -3,11 +3,12 @@ import Image from "next/image";
 
 const AboutSection = () => {
   return (
-    <section id="about-me" className="my-6">
-      <div className="flex flex-col gap-6 justify-evenly items-center">
-        <h3>
+    <section id="about" className="">
+      <div className="flex flex-col gap-6 justify-evenly items-center mt-16">
+        <h3 className="uppercase font-bold text-lg">
           About <span className="text-primary">Me</span>
         </h3>
+
         <p className="text-justify max-w-[750px]">
           Creative and detail-oriented Web Developer with a strong foundation in
           graphic design, offering innovative solutions to visual communication
@@ -16,7 +17,8 @@ const AboutSection = () => {
           user-friendly designs. Adept at transforming concepts into compelling
           solutions in software and multimedia assets.
         </p>
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
+        <div className="border border-primary w-20 mt-2 mb-4 hidden sm:block"></div>
+        <div className="grid sm:grid-cols-1 md:grid-cols-3 gap-4">
           {skills.map((section, index) => {
             return (
               <div

@@ -3,12 +3,12 @@ import React from "react";
 
 const Services = () => {
   return (
-    <section id="services" className="my-6">
-      <div className="flex flex-col gap-6 justify-evenly items-center">
-        <h3>
+    <section id="services" className="">
+      <div className="flex flex-col gap-6 justify-evenly items-center mt-16">
+        <h3 className="uppercase font-bold text-lg">
           My <span className="text-primary">Services</span>
         </h3>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4">
           {services.map((service) => (
             <div
               key={service.name}
