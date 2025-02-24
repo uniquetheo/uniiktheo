@@ -1,0 +1,21 @@
+import React from "react";
+import ContactForm from "./ui/ContactForm";
+
+const Contact = () => {
+  return (
+    <section id="contact" className="my-6">
+      <div className="flex flex-col gap-6 justify-evenly items-center">
+        <h3>
+          Get <span className="text-primary">in touch</span>
+        </h3>
+        <p>
+          I'd love to hear from you! If you have questions, an opportunity or a
+          feedback, please let use the form below.
+        </p>
+        <ContactForm />
+      </div>
+    </section>
+  );
+};
+
+export default Contact;
