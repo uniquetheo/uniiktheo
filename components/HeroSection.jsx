@@ -2,6 +2,7 @@ import { Button } from "./ui/button";
 import { ArrowDown } from "lucide-react";
 import { ArrowBigRight } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 const HeroSection = () => {
   return (
@@ -32,14 +33,18 @@ const HeroSection = () => {
           </p>
         </div>
         <div className="buttons w-full flex items-center justify-center flex-wrap gap-4 mx-auto">
-          <Button>
-            Connect with me
-            <ArrowBigRight />
-          </Button>
-          <Button variant="secondary">
-            Download Resume
-            <ArrowDown />
-          </Button>
+          <Link href="#contact">
+            <Button>
+              Connect with me
+              <ArrowBigRight />
+            </Button>
+          </Link>
+          <a href="/files/TheophilusMResume.pdf" download>
+            <Button variant="secondary">
+              Download Resume
+              <ArrowDown />
+            </Button>
+          </a>
         </div>
       </div>
     </div>
