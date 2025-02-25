@@ -1,16 +1,15 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
+
+import { ThemeToggle } from "@/components/ui/theme-toggle";
 import NavSection from "@/components/NavSection";
 import Footer from "@/components/Footer";
+import { ThemeProvider } from "@/components/ThemeProvider";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  weight: ["400", "500", "700"],
 });
 
 export const metadata = {
@@ -21,12 +20,20 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        <NavSection />
-        {children}
-        <Footer />
+      <body className={`${inter.variable} antialiased`}>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <NavSection />
+          {children}
+          <div className="fixed bottom-4 right-4 z-50">
+            <ThemeToggle />
+          </div>
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );

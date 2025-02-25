@@ -6,7 +6,7 @@ const MyWork = () => {
   return (
     <section id="my-work" className="">
       <div className="flex flex-col gap-6 justify-evenly items-center mt-16">
-        <h3 className="uppercase font-bold text-lg">
+        <h3 className="uppercase font-bold text-lg font-mono">
           My <span className="text-primary">Latest Works</span>
         </h3>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6">

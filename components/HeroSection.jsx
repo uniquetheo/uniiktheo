@@ -1,4 +1,3 @@
-import React from "react";
 import { Button } from "./ui/button";
 import { ArrowDown } from "lucide-react";
 import { ArrowBigRight } from "lucide-react";
@@ -18,12 +17,13 @@ const HeroSection = () => {
               className="object-contain w-40"
             />
           </div>
-          <h3 className="text-center font-semibold">
-            Hi! I'm Theophilus Mercifield 👋
+          <h3 className={`text-center font-semibold font-mono`}>
+            Hi! <span className="text-primary">I'm Theophilus Mercifield</span>{" "}
+            👋
           </h3>
         </div>
         <div className="flex flex-col gap-4 items-center text-center max-w-[500px]">
-          <h2 className="text-5xl text-balance">
+          <h2 className={`text-5xl text-balance font-mono`}>
             Web Developer based in Accra.
           </h2>
           <p>

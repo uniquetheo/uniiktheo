@@ -5,7 +5,7 @@ const AboutSection = () => {
   return (
     <section id="about" className="">
       <div className="flex flex-col gap-6 justify-evenly items-center mt-16">
-        <h3 className="uppercase font-bold text-lg">
+        <h3 className="uppercase font-bold text-lg font-mono">
           About <span className="text-primary">Me</span>
         </h3>
 
@@ -26,7 +26,7 @@ const AboutSection = () => {
                 className="card max-w-[400px] border rounded shadow flex flex-col gap-3 justify-evenly p-4 hover:scale-105"
               >
                 {section.icon}
-                <h4>{section.name}</h4>
+                <h4 className="text-primary font-bold">{section.name}</h4>
                 <p>{section.description}</p>
               </div>
             );

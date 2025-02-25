@@ -62,7 +62,7 @@ const NavSection = () => {
                 href={item.path}
                 className={`${
                   item.path === pathname ? "text-primary" : ""
-                } hover:scale-105`}
+                } hover:scale-105 font-mono uppercase`}
               >
                 {item.name}
               </Link>
@@ -80,8 +80,8 @@ const NavSection = () => {
                   key={idx}
                   href={item.path}
                   className={`${
-                    item.path === pathname ? "text-primary" : ""
-                  } hover:scale-105`}
+                    item.path === pathname ? "text-primary " : ""
+                  } hover:scale-105 font-mono uppercase`}
                 >
                   {item.name}
                 </Link>
@@ -93,7 +93,7 @@ const NavSection = () => {
           {menuOpen ? <X /> : <AlignJustify />}
         </div>
         <Button className="hover:scale-105 hidden md:block">
-          <Link href="#contact">Contact</Link>
+          <Link href="#contact">Contact Me</Link>
         </Button>
       </div>
     </div>
