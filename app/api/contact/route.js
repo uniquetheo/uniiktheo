@@ -8,7 +8,7 @@ export async function GET() {
 export async function POST(req, res) {
   const body = await req.json();
   const { name, email, message } = body;
-  const { EMAIL_USER, EMAIL_PASSWORD } = process.env;
+  const { EMAIL_USER, EMAIL_PASSWORD, ENV } = process.env;
 
   // Configure Nodemailer transporter
   const transporter = nodemailer.createTransport({
@@ -23,7 +23,7 @@ export async function POST(req, res) {
   const mailOptions = {
     from: EMAIL_USER, // Sender address
     to: EMAIL_USER, // Receiver address (your email)
-    subject: `UNIIKTHEO.TECH Contact from ${name}`,
+    subject: `Uniiktheo (${ENV}) Contact from ${name}`,
     text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
   };
 
