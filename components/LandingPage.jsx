@@ -8,8 +8,8 @@ import Contact from "./Contact";
 
 const LandingPage = () => {
   return (
-    <div className="flex flex-col gap-12 relative">
-      <div className="z-10">
+    <div className="relative">
+      <div className="z-10 flex flex-col gap-12 ">
         <HeroSection />
         <AboutSection />
         <Services />
