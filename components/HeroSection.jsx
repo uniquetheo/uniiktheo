@@ -39,7 +39,7 @@ const HeroSection = () => {
               <ArrowBigRight />
             </Button>
           </Link>
-          <a href="/files/TheophilusMResume.pdf" download>
+          <a href="/files/TheophilusMercifieldResume.pdf" download>
             <Button variant="secondary">
               Download Resume
               <ArrowDown />
