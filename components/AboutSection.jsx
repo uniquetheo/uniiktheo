@@ -3,19 +3,20 @@ import Image from "next/image";
 
 const AboutSection = () => {
   return (
-    <section id="about" className="">
+    <section id="about" className="z-20">
       <div className="flex flex-col gap-6 justify-evenly items-center mt-16">
         <h3 className="uppercase font-bold text-lg font-mono">
           About <span className="text-primary">Me</span>
         </h3>
 
         <p className="text-justify max-w-[750px]">
-          Creative and detail-oriented Web Developer with a strong foundation in
-          graphic design, offering innovative solutions to visual communication
-          challenges. Proficient in design tools, web frameworks, and modern
-          technologies, passionate about creating visually appealing and
-          user-friendly designs. Adept at transforming concepts into compelling
-          solutions in software and multimedia assets.
+          I’m a passionate Frontend Developer with a focus on building modern,
+          user-friendly web applications. I specialize in creating responsive
+          and reusable designs using tools like TailwindCSS and Material-UI, and
+          I enjoy turning ideas into dynamic, engaging experiences. With
+          experience in both frontend and backend development, I ensure seamless
+          functionality and performance. I’m dedicated to crafting high-quality
+          solutions that prioritize usability and leave a lasting impression.
         </p>
         <div className="border border-primary w-20 mt-2 mb-4 hidden sm:block"></div>
         <div className="grid sm:grid-cols-1 md:grid-cols-3 gap-4">

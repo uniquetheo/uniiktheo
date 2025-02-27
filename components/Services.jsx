@@ -3,7 +3,7 @@ import React from "react";
 
 const Services = () => {
   return (
-    <section id="services" className="">
+    <section id="services" className="z-10">
       <div className="flex flex-col gap-6 justify-evenly items-center mt-16">
         <h3 className="uppercase font-bold text-lg font-mono">
           My <span className="text-primary">Services</span>

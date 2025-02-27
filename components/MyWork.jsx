@@ -4,7 +4,7 @@ import Link from "next/link";
 import React from "react";
 const MyWork = () => {
   return (
-    <section id="my-work" className="">
+    <section id="my-work" className="z-10">
       <div className="flex flex-col gap-6 justify-evenly items-center mt-16">
         <h3 className="uppercase font-bold text-lg font-mono">
           My <span className="text-primary">Latest Works</span>

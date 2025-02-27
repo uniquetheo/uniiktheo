@@ -3,7 +3,7 @@ import ContactForm from "./ui/ContactForm";
 
 const Contact = () => {
   return (
-    <section id="contact" className="">
+    <section id="contact" className="z-10">
       <div className="flex flex-col gap-6 justify-evenly items-center my-16">
         <h3 className="uppercase font-bold text-lg font-mono">
           Get <span className="text-primary">in touch</span>
