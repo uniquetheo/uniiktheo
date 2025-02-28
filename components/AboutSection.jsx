@@ -1,5 +1,5 @@
-import { skills, tools } from "@/lib/data";
-import Image from "next/image";
+import { skills } from "@/lib/data";
+import MyTools from "./ui/myTools";
 
 const AboutSection = () => {
   return (
@@ -36,14 +36,7 @@ const AboutSection = () => {
         <div className="tools w-full max-w-[750px] my-4 mx-auto">
           <h3>Main tools I use</h3>
           <div className="flex flex-wrap gap-3 my-2">
-            {tools.map((tool, index) => (
-              <div
-                key={index}
-                className="w-[60px] h-[60px] border relative rounded shadow p-4 hover:scale-105"
-              >
-                <Image src={tool.imgSrc} alt={tool.name} fill className="p-2" />
-              </div>
-            ))}
+            <MyTools />
           </div>
         </div>
       </div>

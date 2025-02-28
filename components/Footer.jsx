@@ -1,8 +1,12 @@
+"use client"
+
 import { socials } from "@/lib/data";
 import Image from "next/image";
 import Link from "next/link";
+import {useTheme} from "next-themes";
 
 const Footer = () => {
+const {theme}=useTheme();
   return (
     <footer className="">
       <div className="container mx-auto px-4 py-6 border-t text-muted-foreground">
@@ -14,7 +18,11 @@ const Footer = () => {
               target="_blank"
             >
               <Image
-                src="/images/uniik-plain.png"
+                src={
+                  theme === "dark"
+                    ? "/images/uniik.dark-plain.png"
+                    : "/images/uniik-plain.png"
+                }
                 alt="UniikTheo"
                 width={106}
                 height={500}
