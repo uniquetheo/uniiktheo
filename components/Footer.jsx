@@ -1,12 +1,9 @@
-"use client"
-
 import { socials } from "@/lib/data";
 import Image from "next/image";
 import Link from "next/link";
-import {useTheme} from "next-themes";
+import MyLogo from "./ui/myLogo";
 
 const Footer = () => {
-const {theme}=useTheme();
   return (
     <footer className="">
       <div className="container mx-auto px-4 py-6 border-t text-muted-foreground">
@@ -17,17 +14,7 @@ const {theme}=useTheme();
               className="hover:cursor-pointer"
               target="_blank"
             >
-              <Image
-                src={
-                  theme === "dark"
-                    ? "/images/uniik.dark-plain.png"
-                    : "/images/uniik-plain.png"
-                }
-                alt="UniikTheo"
-                width={106}
-                height={500}
-                className="object-contain h-6"
-              />{" "}
+              <MyLogo />
             </Link>
             <p>All rights reserved &copy; {new Date().getFullYear()}</p>
           </div>

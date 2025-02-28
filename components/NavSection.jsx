@@ -6,19 +6,17 @@ import Link from "next/link";
 import { AlignJustify, X } from "lucide-react";
 import { usePathname } from "next/navigation";
 import { NavLinks } from "@/lib/data";
-import { useTheme } from "next-themes";
-import Image from "next/image";
+import MyLogo from "./ui/myLogo";
 
 const NavSection = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeTab, setActiveTab] = useState("home");
   const pathname = usePathname();
   const menuRef = useRef(null);
-  const { theme } = useTheme();
 
   useEffect(() => {
     setActiveTab(pathname.split("/")[1]);
-    console.log(theme);
+    console.log(activeTab);
     setMenuOpen(false);
   }, [pathname]);
 
@@ -48,17 +46,7 @@ const NavSection = () => {
     <div className="dark:bg-black/50 backdrop-blur-sm w-full fixed top-0 z-50">
       <div className="h-16 container mx-auto px-4 flex justify-between items-center relative">
         <Link href="/" className="hover:cursor-pointer hover:scale-105">
-          <Image
-            src={
-              theme === "dark"
-                ? "/images/uniik.dark-plain.png"
-                : "/images/uniik-plain.png"
-            }
-            alt="uniiktheo logo"
-            width={106}
-            height={500}
-            className="object-contain h-16"
-          />
+          <MyLogo />
         </Link>
         <div className="hidden md:flex space-x-4 md:space-x-8 lg:space-x-12">
           {NavLinks.map((item, idx) => {
