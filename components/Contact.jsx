@@ -10,7 +10,7 @@ const Contact = () => {
         </h3>
         <p>
           I'd love to hear from you! If you have questions, an opportunity or a
-          feedback, please let use the form below.
+          feedback, use the form below.
         </p>
         <ContactForm />
       </div>
