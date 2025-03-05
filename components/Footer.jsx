@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <footer className="z-20">
       <div className="container mx-auto px-4 py-6 border-t text-muted-foreground">
-        <div className="flex justify-between items-center gap-4 flex-wrap ">
+        <div className="flex justify-between items-center gap-4 flex-wrap z-20">
           <div className="flex sm:h-8 justify-center items-center gap-4 flex-wrap w-full sm:w-auto">
             <Link
               href="https://uniiktheo.tech"
