@@ -8,7 +8,7 @@ const Footer = () => {
     <footer className="z-20">
       <div className="container mx-auto px-4 py-6 border-t text-muted-foreground">
         <div className="flex justify-between items-center gap-4 flex-wrap z-20">
-          <div className="flex sm:h-8 justify-center items-center gap-4 flex-wrap w-full sm:w-auto">
+          <div className="flex sm:h-8 justify-center items-center gap-4 flex-wrap w-full z-20 sm:w-auto">
             <Link
               href="https://uniiktheo.tech"
               className="hover:cursor-pointer"
@@ -18,7 +18,7 @@ const Footer = () => {
             </Link>
             <p>All rights reserved &copy; {new Date().getFullYear()}</p>
           </div>
-          <div className="flex gap-3 justify-center items-center w-full sm:w-auto">
+          <div className="flex gap-3 justify-center items-center w-full z-20 sm:w-auto">
             {socials.map((social, index) => (
               <Link
                 key={index}
