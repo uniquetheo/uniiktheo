@@ -1,0 +1,29 @@
+
+> uniiktheo@0.1.0 build C:\Users\ADMIN\Documents\GITHUB\uniiktheo
+> next build
+
+   ▲ Next.js 15.1.7
+
+   Creating an optimized production build ...
+Failed to compile.
+
+./app/page.tsx
+Error:   [31mx[0m You're importing a component that needs `useState`. This React hook only works in a client component. To fix, mark the file (or its parent) with the `"use client"` directive.
+  [31m|[0m 
+  [31m|[0m  Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+  [31m|[0m 
+  [31m|[0m 
+   ,-[[36;1;4mC:\Users\ADMIN\Documents\GITHUB\uniiktheo\app\page.tsx[0m:1:1]
+ [2m1[0m | import { useState } from "react";
+   : [35;1m         ^^^^^^^^[0m
+ [2m2[0m | import { Hero } from "@/components/Hero";
+ [2m3[0m | import { ProblemStatement } from "@/components/ProblemStatement";
+ [2m3[0m | import { ValueProposition } from "@/components/ValueProposition";
+   `----
+
+Import trace for requested module:
+./app/page.tsx
+
+
+> Build failed because of webpack errors
+ ELIFECYCLE  Command failed with exit code 1.
