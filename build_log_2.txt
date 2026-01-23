@@ -1,0 +1,70 @@
+
+> uniiktheo@0.1.0 build C:\Users\ADMIN\Documents\GITHUB\uniiktheo
+> next build
+
+   ▲ Next.js 15.1.7
+
+   Creating an optimized production build ...
+<w> [webpack.cache.PackFileCacheStrategy] Skipped not serializable cache item 'Compilation/modules|C:\Users\ADMIN\Documents\GITHUB\uniiktheo\node_modules\.pnpm\next@15.1.7_react-dom@19.0.0_react@19.0.0__react@19.0.0\node_modules\next\dist\build\webpack\loaders\css-loader\src\index.js??ruleSet[1].rules[13].oneOf[10].use[2]!C:\Users\ADMIN\Documents\GITHUB\uniiktheo\node_modules\.pnpm\next@15.1.7_react-dom@19.0.0_react@19.0.0__react@19.0.0\node_modules\next\dist\build\webpack\loaders\postcss-loader\src\index.js??ruleSet[1].rules[13].oneOf[10].use[3]!C:\Users\ADMIN\Documents\GITHUB\uniiktheo\app\globals.css': No serializer registered for PostCSSSyntaxError
+<w> while serializing webpack/lib/cache/PackFileCacheStrategy.PackContentItems -> webpack/lib/NormalModule -> webpack/lib/ModuleBuildError -> PostCSSSyntaxError
+Failed to compile.
+
+./app/globals.css:3:1
+Syntax error: C:\Users\ADMIN\Documents\GITHUB\uniiktheo\app\globals.css The `outline-ring/50` class does not exist. If `outline-ring/50` is a custom class, make sure it is defined within a `@layer` directive.
+
+ [90m 1 | [39m[36m@import[39m [36murl[39m[36m([39m[32m"https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Inter:wght@400;500;600;700;800&family=Fira+Code&display=swap"[39m[36m)[39m[33m;[39m
+ [90m 2 | [39m
+[1m[31m>[39m[22m[90m 3 | [39m[36m@tailwind[39m base[33m;[39m
+ [90m   | [39m[1m[31m^[39m[22m
+ [90m 4 | [39m[36m@tailwind[39m components[33m;[39m
+ [90m 5 | [39m[36m@tailwind[39m utilities[33m;[39m
+
+./app/globals.css
+Syntax error: C:\Users\ADMIN\Documents\GITHUB\uniiktheo\app\globals.css The `outline-ring/50` class does not exist. If `outline-ring/50` is a custom class, make sure it is defined within a `@layer` directive. (3:1)
+
+ [90m 1 | [39m[36m@import[39m [36murl[39m[36m([39m[32m"https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Inter:wght@400;500;600;700;800&family=Fira+Code&display=swap"[39m[36m)[39m[33m;[39m
+ [90m 2 | [39m
+[1m[31m>[39m[22m[90m 3 | [39m[36m@tailwind[39m base[33m;[39m
+ [90m   | [39m[1m[31m^[39m[22m
+ [90m 4 | [39m[36m@tailwind[39m components[33m;[39m
+ [90m 5 | [39m[36m@tailwind[39m utilities[33m;[39m
+
+    at tryRunOrWebpackError (C:\Users\ADMIN\Documents\GITHUB\uniiktheo\node_modules\.pnpm\next@15.1.7_react-dom@19.0.0_react@19.0.0__react@19.0.0\node_modules\next\dist\compiled\webpack\bundle5.js:28:314962)
+    at __webpack_require_module__ (C:\Users\ADMIN\Documents\GITHUB\uniiktheo\node_modules\.pnpm\next@15.1.7_react-dom@19.0.0_react@19.0.0__react@19.0.0\node_modules\next\dist\compiled\webpack\bundle5.js:28:131434)
+    at __nested_webpack_require_161179__ (C:\Users\ADMIN\Documents\GITHUB\uniiktheo\node_modules\.pnpm\next@15.1.7_react-dom@19.0.0_react@19.0.0__react@19.0.0\node_modules\next\dist\compiled\webpack\bundle5.js:28:130872)
+    at C:\Users\ADMIN\Documents\GITHUB\uniiktheo\node_modules\.pnpm\next@15.1.7_react-dom@19.0.0_react@19.0.0__react@19.0.0\node_modules\next\dist\compiled\webpack\bundle5.js:28:131723
+    at symbolIterator (C:\Users\ADMIN\Documents\GITHUB\uniiktheo\node_modules\.pnpm\next@15.1.7_react-dom@19.0.0_react@19.0.0__react@19.0.0\node_modules\next\dist\compiled\neo-async\async.js:1:14444)
+    at done (C:\Users\ADMIN\Documents\GITHUB\uniiktheo\node_modules\.pnpm\next@15.1.7_react-dom@19.0.0_react@19.0.0__react@19.0.0\node_modules\next\dist\compiled\neo-async\async.js:1:14824)
+    at Hook.eval [as callAsync] (eval at create (C:\Users\ADMIN\Documents\GITHUB\uniiktheo\node_modules\.pnpm\next@15.1.7_react-dom@19.0.0_react@19.0.0__react@19.0.0\node_modules\next\dist\compiled\webpack\bundle5.js:13:9218), <anonymous>:15:1)
+    at Hook.CALL_ASYNC_DELEGATE [as _callAsync] (C:\Users\ADMIN\Documents\GITHUB\uniiktheo\node_modules\.pnpm\next@15.1.7_react-dom@19.0.0_react@19.0.0__react@19.0.0\node_modules\next\dist\compiled\webpack\bundle5.js:13:6372)
+    at C:\Users\ADMIN\Documents\GITHUB\uniiktheo\node_modules\.pnpm\next@15.1.7_react-dom@19.0.0_react@19.0.0__react@19.0.0\node_modules\next\dist\compiled\webpack\bundle5.js:28:130593
+    at symbolIterator (C:\Users\ADMIN\Documents\GITHUB\uniiktheo\node_modules\.pnpm\next@15.1.7_react-dom@19.0.0_react@19.0.0__react@19.0.0\node_modules\next\dist\compiled\neo-async\async.js:1:14402)
+-- inner error --
+Syntax error: C:\Users\ADMIN\Documents\GITHUB\uniiktheo\app\globals.css The `outline-ring/50` class does not exist. If `outline-ring/50` is a custom class, make sure it is defined within a `@layer` directive. (3:1)
+
+ [90m 1 | [39m[36m@import[39m [36murl[39m[36m([39m[32m"https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Inter:wght@400;500;600;700;800&family=Fira+Code&display=swap"[39m[36m)[39m[33m;[39m
+ [90m 2 | [39m
+[1m[31m>[39m[22m[90m 3 | [39m[36m@tailwind[39m base[33m;[39m
+ [90m   | [39m[1m[31m^[39m[22m
+ [90m 4 | [39m[36m@tailwind[39m components[33m;[39m
+ [90m 5 | [39m[36m@tailwind[39m utilities[33m;[39m
+
+    at Object.<anonymous> (C:\Users\ADMIN\Documents\GITHUB\uniiktheo\node_modules\.pnpm\next@15.1.7_react-dom@19.0.0_react@19.0.0__react@19.0.0\node_modules\next\dist\build\webpack\loaders\css-loader\src\index.js??ruleSet[1].rules[13].oneOf[10].use[2]!C:\Users\ADMIN\Documents\GITHUB\uniiktheo\node_modules\.pnpm\next@15.1.7_react-dom@19.0.0_react@19.0.0__react@19.0.0\node_modules\next\dist\build\webpack\loaders\postcss-loader\src\index.js??ruleSet[1].rules[13].oneOf[10].use[3]!C:\Users\ADMIN\Documents\GITHUB\uniiktheo\app\globals.css:1:7)
+    at C:\Users\ADMIN\Documents\GITHUB\uniiktheo\node_modules\.pnpm\next@15.1.7_react-dom@19.0.0_react@19.0.0__react@19.0.0\node_modules\next\dist\compiled\webpack\bundle5.js:28:955548
+    at Hook.eval [as call] (eval at create (C:\Users\ADMIN\Documents\GITHUB\uniiktheo\node_modules\.pnpm\next@15.1.7_react-dom@19.0.0_react@19.0.0__react@19.0.0\node_modules\next\dist\compiled\webpack\bundle5.js:13:8996), <anonymous>:7:1)
+    at Hook.CALL_DELEGATE [as _call] (C:\Users\ADMIN\Documents\GITHUB\uniiktheo\node_modules\.pnpm\next@15.1.7_react-dom@19.0.0_react@19.0.0__react@19.0.0\node_modules\next\dist\compiled\webpack\bundle5.js:13:6266)
+    at C:\Users\ADMIN\Documents\GITHUB\uniiktheo\node_modules\.pnpm\next@15.1.7_react-dom@19.0.0_react@19.0.0__react@19.0.0\node_modules\next\dist\compiled\webpack\bundle5.js:28:131467
+    at tryRunOrWebpackError (C:\Users\ADMIN\Documents\GITHUB\uniiktheo\node_modules\.pnpm\next@15.1.7_react-dom@19.0.0_react@19.0.0__react@19.0.0\node_modules\next\dist\compiled\webpack\bundle5.js:28:314916)
+    at __webpack_require_module__ (C:\Users\ADMIN\Documents\GITHUB\uniiktheo\node_modules\.pnpm\next@15.1.7_react-dom@19.0.0_react@19.0.0__react@19.0.0\node_modules\next\dist\compiled\webpack\bundle5.js:28:131434)
+    at __nested_webpack_require_161179__ (C:\Users\ADMIN\Documents\GITHUB\uniiktheo\node_modules\.pnpm\next@15.1.7_react-dom@19.0.0_react@19.0.0__react@19.0.0\node_modules\next\dist\compiled\webpack\bundle5.js:28:130872)
+    at C:\Users\ADMIN\Documents\GITHUB\uniiktheo\node_modules\.pnpm\next@15.1.7_react-dom@19.0.0_react@19.0.0__react@19.0.0\node_modules\next\dist\compiled\webpack\bundle5.js:28:131723
+    at symbolIterator (C:\Users\ADMIN\Documents\GITHUB\uniiktheo\node_modules\.pnpm\next@15.1.7_react-dom@19.0.0_react@19.0.0__react@19.0.0\node_modules\next\dist\compiled\neo-async\async.js:1:14444)
+
+Generated code for C:\Users\ADMIN\Documents\GITHUB\uniiktheo\node_modules\.pnpm\next@15.1.7_react-dom@19.0.0_react@19.0.0__react@19.0.0\node_modules\next\dist\build\webpack\loaders\css-loader\src\index.js??ruleSet[1].rules[13].oneOf[10].use[2]!C:\Users\ADMIN\Documents\GITHUB\uniiktheo\node_modules\.pnpm\next@15.1.7_react-dom@19.0.0_react@19.0.0__react@19.0.0\node_modules\next\dist\build\webpack\loaders\postcss-loader\src\index.js??ruleSet[1].rules[13].oneOf[10].use[3]!C:\Users\ADMIN\Documents\GITHUB\uniiktheo\app\globals.css
+
+Import trace for requested module:
+./app/globals.css
+
+
+> Build failed because of webpack errors
+ ELIFECYCLE  Command failed with exit code 1.
