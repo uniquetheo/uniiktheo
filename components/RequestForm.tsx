@@ -23,6 +23,7 @@ interface FormData {
 export function RequestForm({ isOpen, onClose }: RequestFormProps) {
   const [currentStep, setCurrentStep] = useState(1);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState<FormData>({
     name: "",
     email: "",
@@ -48,10 +49,29 @@ export function RequestForm({ isOpen, onClose }: RequestFormProps) {
     }
   };
 
-  const handleSubmit = () => {
-    setIsSubmitted(true);
-    // Here you would normally send the form data to a backend
-    console.log("Form submitted:", formData);
+  const handleSubmit = async () => {
+    setIsSubmitting(true);
+    try {
+      const response = await fetch("/api/send", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to send request");
+      }
+
+      setIsSubmitted(true);
+      console.log("Form submitted successfully");
+    } catch (error) {
+      console.error("Submission error:", error);
+      alert("Something went wrong. Please try again later.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleClose = () => {
@@ -59,6 +79,7 @@ export function RequestForm({ isOpen, onClose }: RequestFormProps) {
     setTimeout(() => {
       setCurrentStep(1);
       setIsSubmitted(false);
+      setIsSubmitting(false);
       setFormData({
         name: "",
         email: "",
@@ -141,7 +162,7 @@ export function RequestForm({ isOpen, onClose }: RequestFormProps) {
             {/* Progress Bar */}
             {!isSubmitted && (
               <div className="px-8 pt-8 pb-6">
-                <div className="flex items-center justify-between mb-2">
+                <div className="flex items-center justify-between w-[calc(100%-3rem)] mb-2">
                   <span
                     className="text-sm font-medium"
                     style={{ color: "#5F6B7A" }}
@@ -700,10 +721,11 @@ export function RequestForm({ isOpen, onClose }: RequestFormProps) {
                 ) : (
                   <button
                     onClick={handleSubmit}
-                    className="px-6 py-3 rounded-xl text-white font-medium shadow-md hover:shadow-lg transition-all hover:-translate-y-0.5"
+                    disabled={isSubmitting}
+                    className="px-6 py-3 rounded-xl text-white font-medium shadow-md hover:shadow-lg transition-all hover:-translate-y-0.5 disabled:opacity-50 disabled:cursor-not-allowed"
                     style={{ backgroundColor: "#084168" }}
                   >
-                    Submit Request
+                    {isSubmitting ? "Sending..." : "Submit Request"}
                   </button>
                 )}
               </div>
