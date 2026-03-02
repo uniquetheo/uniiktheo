@@ -2,6 +2,7 @@
 
 import { motion } from "motion/react";
 import { ArrowRight } from "lucide-react";
+import Image from "next/image";
 
 interface HeroProps {
   onRequestSolution: () => void;
@@ -84,10 +85,18 @@ export function Hero({ onRequestSolution, onScrollToHowItWorks }: HeroProps) {
                     borderWidth: "1px",
                   }}
                 />
-                <div
-                  className="absolute w-64 h-64 rounded-3xl shadow-xl transform -rotate-3"
-                  style={{ backgroundColor: "#084168", opacity: 0.05 }}
-                />
+                <div className="absolute w-64 rounded-3xl shadow-xl transform -rotate-3">
+                  <Image
+                    src="/images/dashboard-2.jpg"
+                    alt="Hero"
+                    width={3000}
+                    height={2000}
+                    style={{
+                      objectFit: "cover",
+                      borderRadius: "1rem",
+                    }}
+                  />
+                </div>
               </div>
             </div>
           </motion.div>
