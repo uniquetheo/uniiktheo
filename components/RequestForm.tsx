@@ -176,7 +176,7 @@ export function RequestForm({ isOpen, onClose }: RequestFormProps) {
                     Step {currentStep} of {totalSteps}
                   </span>
                   <span
-                    className="text-sm font-medium"
+                    className="text-sm font-medium mr-10"
                     style={{ color: "#5F6B7A" }}
                   >
                     {Math.round((currentStep / totalSteps) * 100)}%
