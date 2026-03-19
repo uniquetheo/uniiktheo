@@ -7,6 +7,7 @@ import { ValueProposition } from "@/components/ValueProposition";
 import { HowItWorks } from "@/components/HowItWorks";
 import { TypesOfSolutions } from "@/components/TypesOfSolutions";
 import { Credibility } from "@/components/Credibility";
+import { PortfolioPreview } from "@/components/PortfolioPreview";
 import { CTASection } from "@/components/CTASection";
 import { Footer } from "@/components/Footer";
 import { RequestForm } from "@/components/RequestForm";
@@ -37,6 +38,8 @@ export default function App() {
       <TypesOfSolutions />
 
       <Credibility />
+
+      <PortfolioPreview />
 
       <CTASection onRequestSolution={() => setIsFormOpen(true)} />
 

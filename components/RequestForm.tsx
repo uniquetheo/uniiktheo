@@ -23,7 +23,6 @@ interface FormData {
 export function RequestForm({ isOpen, onClose }: RequestFormProps) {
   const [currentStep, setCurrentStep] = useState(1);
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState<FormData>({
     name: "",
     email: "",
@@ -50,27 +49,35 @@ export function RequestForm({ isOpen, onClose }: RequestFormProps) {
   };
 
   const handleSubmit = async () => {
-    setIsSubmitting(true);
     try {
-      const response = await fetch("/api/send", {
+      const response = await fetch("/api/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          message: `
+            Company: ${formData.company || "N/A"}
+            Problem: ${formData.problem}
+            Goals: ${formData.goals.join(", ")}
+            Status: ${formData.productStatus}
+            Timeline: ${formData.timeline}
+            Budget: ${formData.budget}
+          `,
+        }),
       });
 
-      if (!response.ok) {
-        throw new Error("Failed to send request");
+      if (response.ok) {
+        setIsSubmitted(true);
+      } else {
+        console.error("Failed to submit form");
+        alert("Something went wrong. Please try again.");
       }
-
-      setIsSubmitted(true);
-      console.log("Form submitted successfully");
     } catch (error) {
-      console.error("Submission error:", error);
-      alert("Something went wrong. Please try again later.");
-    } finally {
-      setIsSubmitting(false);
+      console.error("Error submitting form:", error);
+      alert("Error submitting form. Please check your connection.");
     }
   };
 
@@ -79,7 +86,6 @@ export function RequestForm({ isOpen, onClose }: RequestFormProps) {
     setTimeout(() => {
       setCurrentStep(1);
       setIsSubmitted(false);
-      setIsSubmitting(false);
       setFormData({
         name: "",
         email: "",
@@ -162,7 +168,7 @@ export function RequestForm({ isOpen, onClose }: RequestFormProps) {
             {/* Progress Bar */}
             {!isSubmitted && (
               <div className="px-8 pt-8 pb-6">
-                <div className="flex items-center justify-between w-[calc(100%-3rem)] mb-2">
+                <div className="flex items-center justify-between mb-2">
                   <span
                     className="text-sm font-medium"
                     style={{ color: "#5F6B7A" }}
@@ -170,7 +176,7 @@ export function RequestForm({ isOpen, onClose }: RequestFormProps) {
                     Step {currentStep} of {totalSteps}
                   </span>
                   <span
-                    className="text-sm font-medium"
+                    className="text-sm font-medium mr-10"
                     style={{ color: "#5F6B7A" }}
                   >
                     {Math.round((currentStep / totalSteps) * 100)}%
@@ -721,11 +727,10 @@ export function RequestForm({ isOpen, onClose }: RequestFormProps) {
                 ) : (
                   <button
                     onClick={handleSubmit}
-                    disabled={isSubmitting}
-                    className="px-6 py-3 rounded-xl text-white font-medium shadow-md hover:shadow-lg transition-all hover:-translate-y-0.5 disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="px-6 py-3 rounded-xl text-white font-medium shadow-md hover:shadow-lg transition-all hover:-translate-y-0.5"
                     style={{ backgroundColor: "#084168" }}
                   >
-                    {isSubmitting ? "Sending..." : "Submit Request"}
+                    Submit Request
                   </button>
                 )}
               </div>

@@ -16,6 +16,7 @@ export function CTASection({ onRequestSolution }: CTASectionProps) {
   return (
     <section
       ref={ref}
+      id="cta-section"
       className="py-20 lg:py-32"
       style={{ backgroundColor: "#F7F8FA" }}
     >
