@@ -1,5 +1,7 @@
 import { NextResponse } from "next/server";
-import nodemailer from "nodemailer";
+import { Resend } from "resend";
+
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(request: Request) {
   try {
@@ -15,17 +17,9 @@ export async function POST(request: Request) {
       budget,
     } = body;
 
-    const transporter = nodemailer.createTransport({
-      service: "gmail",
-      auth: {
-        user: process.env.GMAIL_USER,
-        pass: process.env.GMAIL_APP_PASSWORD,
-      },
-    });
-
-    const mailOptions = {
-      from: process.env.GMAIL_USER,
-      to: process.env.GMAIL_USER, // Sending to yourself
+    const { data, error } = await resend.emails.send({
+      from: "UniikTheo <onboarding@resend.dev>",
+      to: process.env.GMAIL_USER!,
       replyTo: email,
       subject: `New Project Request from ${name}`,
       html: `
@@ -42,11 +36,13 @@ export async function POST(request: Request) {
         <p><strong>Timeline:</strong> ${timeline}</p>
         <p><strong>Budget:</strong> ${budget}</p>
       `,
-    };
+    });
 
-    const info = await transporter.sendMail(mailOptions);
+    if (error) {
+      return NextResponse.json({ error: error.message }, { status: 500 });
+    }
 
-    return NextResponse.json({ data: info });
+    return NextResponse.json({ data });
   } catch (error) {
     return NextResponse.json(
       { error: (error as Error).message },
