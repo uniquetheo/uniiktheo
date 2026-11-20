@@ -24,6 +24,9 @@ export async function POST(request: Request) {
       email,
       amount: Math.round(amount * 100), // pesewas
       currency: "GHS",
+      // Without this Paystack shows only the account's default channels (no bank transfer).
+      // Each channel must also be enabled on the live account (Dashboard > Settings > Preferences).
+      channels: ["card", "mobile_money", "bank_transfer"],
       callback_url: `${origin}/pay`,
       metadata: {
         invoice,
